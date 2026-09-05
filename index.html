@@ -1,0 +1,251 @@
+<!DOCTYPE html><html lang="zh" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>平屋慢生活 - 腦中的思考</title><meta name="author" content="Yo-Lin"><meta name="copyright" content="Yo-Lin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="website">
+<meta property="og:title" content="平屋慢生活">
+<meta property="og:url" content="https://chi-keke.github.io/journal/">
+<meta property="og:site_name" content="平屋慢生活">
+<meta property="og:locale">
+<meta property="og:image" content="https://chi-keke.github.io/journal/img/butterfly-icon.png">
+<meta property="article:author" content="Yo-Lin">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chi-keke.github.io/journal/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/journal/img/favicon.png"><link rel="canonical" href="https://chi-keke.github.io/journal/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/journal/css/index.css?v=5.7.1.260810"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        try {
+          const data = { value }
+
+          if (ttl != null) {
+            data.expiry = Date.now() + ttl * 86400000
+          }
+
+          localStorage.setItem(key, JSON.stringify(data))
+        } catch (e) {
+          console.error(e)
+        }
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/journal/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '平屋慢生活',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/journal/"><span class="site-name">平屋慢生活</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">平屋慢生活</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/journal/2026/09/05/ohyani/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-09-05T07:05:10.683Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></span></div><div class="content">後面那個好對付的，對付他 敢不敢打一支全壘打 上來就自己去一壘，還要我叫 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/journal/2026/09/05/Haikyu-%E4%B8%8D%E9%81%8E%E6%98%AF%E7%A4%BE%E5%9C%98%E6%B4%BB%E5%8B%95/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></span></div><div class="content">3-4 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/journal/2026/09/05/Haikyu-%E8%AA%8D%E6%B8%85%E8%87%AA%E5%B7%B1%EF%BC%8C%E6%89%BE%E5%B0%8B%E8%87%AA%E5%B7%B1%E8%83%BD%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85-%E7%B7%A3%E4%B8%8B/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></span></div><div class="content">緣下 - 認清自己，找尋自己能做的事情知道自己不如人，但仍清楚自己的優勢，與之一戰 3.從緊張或冒牌者症候群振作起來是想起過去的經驗 從心想起回到排球社的原因 因為一切都是發自內心的 我既然已經站在場上，再找這種藉口來逃避，一點意義都沒有，如果逃避，之後一定會感到痛苦應該可以理解不同的想法，我就是為了要戰鬥才回到排球社的 沒時間灰心喪志了，要彌補與大地的差距，不是一時半刻的事情，我自己也知道這件事情，所以才要想辦法對付他緣下用力思考出對策破局 </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/journal/2026/09/05/Haikyu-%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9A%84%E7%B7%B4%E7%BF%92%E8%B3%BD-%E6%97%A5%E5%90%91/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></span></div><div class="content">最嚴重也不過如此想像自己最害怕的的事情 網子這邊通通是你的夥伴有依靠感 </div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/journal/2026/08/22/Titan-%E6%88%91%E5%80%91%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E4%B8%80%E7%9B%B4%E5%A4%B1%E6%95%97%E9%81%8E%E4%BE%86%E7%9A%84/" title="我們就是這樣一直失敗過來的 - S3E4"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/Titan/titan-4-we-lose-alot.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="我們就是這樣一直失敗過來的 - S3E4"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/08/22/Titan-%E6%88%91%E5%80%91%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E4%B8%80%E7%9B%B4%E5%A4%B1%E6%95%97%E9%81%8E%E4%BE%86%E7%9A%84/" title="我們就是這樣一直失敗過來的 - S3E4">我們就是這樣一直失敗過來的 - S3E4</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-08-22T03:49:34.000Z" title="Created 2026-08-22 11:49:34">2026-08-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Titan/">Titan</a></span></div><div class="content">「調查兵團」的核心精神在《進擊的巨人》第三季前段「王政篇」中，此時的敵人已經不再只是巨人，而是牆內的王政府與憲兵體系。隨著真相一點一滴地的揭露，調查兵團漸漸的發現，真正的王室、雷斯家、艾連與希絲特莉亞的身世，以及牆內政府刻意隱藏的歷史彼此相關。團長艾爾文因此決定將矛頭轉向現有王政，可以說讓調查兵團從「人類的軍隊」變成了政府眼中的叛亂者 迪莫・利布斯 原本與調查兵團達成合作，而後遭到中央第一憲兵團殺害。中央憲兵還試圖將罪名栽贓給調查兵團。此時，兒子弗列格不只失去了父親，也變成知道真相、下一個要被滅口的人 韓吉 找到 弗列格 後，希望他不要一味地逃跑、躲躲藏藏，而是站出來揭露中央憲兵殺害他父親的真相。對 弗列格 來說，這個要求其實非常荒謬，你們調查兵團現在自己都被政府追殺，幾乎自身難保，憑什麼叫我相信跟著你們反抗會成功？   我們知道，韓吉在調查兵團中比較像是科學家，他並不是那種一定確定會成功才會行動的人。相反，她充滿好奇心、充滿挑戰精神以及執行力，並且相信其中的價值所在，她很清楚調查兵團一路走來付出了多少代價、經歷多少失敗，此時韓吉說出了讓我印象非常深刻的那句話     你在說甚麼...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/journal/2026/08/16/Hinamatsuri-%E9%80%99%E6%98%AF%E5%85%85%E6%BB%BF%E8%AA%98%E6%83%91%E9%99%B7%E9%98%B1%E7%9A%84%E8%A1%97%E9%81%93/" title="這是充滿誘惑陷阱的街道"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/Hinamatsuri/1-landing.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="這是充滿誘惑陷阱的街道"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/08/16/Hinamatsuri-%E9%80%99%E6%98%AF%E5%85%85%E6%BB%BF%E8%AA%98%E6%83%91%E9%99%B7%E9%98%B1%E7%9A%84%E8%A1%97%E9%81%93/" title="這是充滿誘惑陷阱的街道">這是充滿誘惑陷阱的街道</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-08-16T06:03:34.000Z" title="Created 2026-08-16 14:03:34">2026-08-16</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Hinamatsuri/">Hinamatsuri</a></span></div><div class="content">小雛的背景決定了她理解世界的方式小雛並不是一個正常在社會中長大的少女。她來自超能力研究所，因此沒有像普通小孩一樣，在家庭、學校、朋友、社會互動之中慢慢建立完整的社會常識。所以她進入新田的生活之後，其實有一部分是在「觀察這個社會 → 模仿 → 建立自己的理解。」這讓她很容易出現一種狀態就是，她可能知道某個東西「看起來應該怎麼做」，卻不知道「人們為什麼這樣做」。這是小雛非常重要的喜劇來源。 「照搬電視劇」特別符合她的人設  她看到電視劇裡的人跟蹤別人，可能學到「這種夜晚跟蹤的場合，就會說『這裡是充滿誘惑與陷阱的危險街道』。」她掌握了形式，卻不完全掌握背後的社會語境。一般觀眾聽到危險街道、誘惑、陷阱、中招會自然套用成人社會的經驗，想到黑道、犯罪、夜生活等比較嚴重的東西。 但是小雛沒有那套完整的社會經驗。她用自己的經驗填進去了，而她的經驗是「上次來這裡 → 聞到很好吃的東西 → 被吸引走 → 原本的事情沒做成。」因此「我被誘惑了。」從字面邏輯來看，甚至不能說她完全錯。這就是好笑的地方。 她不是「沒有邏輯」，只是「邏輯正確、語境錯位」她有自己的推理  誘惑 &#x3D; 會讓我忍不住偏離原...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/journal/2026/07/10/Hinamatsuri-%E7%AC%91%E9%BB%9E/" title="笑點"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/Hinamatsuri/1-landing.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="笑點"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/07/10/Hinamatsuri-%E7%AC%91%E9%BB%9E/" title="笑點">笑點</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-07-10T02:44:34.000Z" title="Created 2026-07-10 10:44:34">2026-07-10</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Hinamatsuri/">Hinamatsuri</a></span></div><div class="content">看了 ヒナまつり (極道超女) 後，我對自己的笑點這件事情有了很深到好奇心，因此我將拆解這個作品並思考其中有神麼樣的秘密 從頭回顧後，發現他的風格與笑點的呈現方式在第一話就已經嶄露無疑 主角登場…新田當時穿著極具質感的西裝，坐在裝潢奢華、充滿現代感的高級公寓裡。 他搖晃著紅酒杯、神情自若地接著電話。這畫面通常是用來那些「一秒鐘幾十萬上下」、動動手指就能操控市場的跨國金融巨頭或幕後黑手 「200萬成了嗎？到手了」以及看著收藏品時那種帶著一絲輕挑、滿足又帶有絕對自信的眼神，完美傳達出那種「這點錢對我來說根本不算什麼」的餘裕。這種闊綽感，讓讀者在第一時間直覺認定這個男人是在地下社會呼風喚雨、靠著殘酷手段輕鬆賺取暴利的黑道高層  畫風驟變一個神秘的、超科技的巨大膠囊突然砸穿天花板、k 在新田頭上 新田 : (盯著看…. ) 我一定是喝茫了，沒事沒事，先來去洗洗睡 然後真的當沒事去睡了…..? 蛤? 隔天早上醒來，他依然如平常那樣梳洗完畢後走到客廳，看著眼前那顆膠囊，神色淡然表情嚴肅 靠…竟然還在阿… 這行為就像「發現昨晚逃避的暑假作業今天醒來依然擺在桌上」的學生，保持著不合理的期待  一...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/journal/2026/05/31/Ace-of-diamond-%E4%B8%8D%E6%BB%BF%E4%B9%8B%E9%A4%98%EF%BC%8C%E4%BD%A0%E5%8F%88%E5%81%9A%E4%BA%86%E7%94%9A%E9%BA%BC/" title="不滿之餘，你又做了甚麼"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/ace/conflict/dont-push-to-captain.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="不滿之餘，你又做了甚麼"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/05/31/Ace-of-diamond-%E4%B8%8D%E6%BB%BF%E4%B9%8B%E9%A4%98%EF%BC%8C%E4%BD%A0%E5%8F%88%E5%81%9A%E4%BA%86%E7%94%9A%E9%BA%BC/" title="不滿之餘，你又做了甚麼">不滿之餘，你又做了甚麼</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-05-31T03:18:34.000Z" title="Created 2026-05-31 11:18:34">2026-05-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Ace-of-diamonds/">Ace-of-diamonds</a></span></div><div class="content">鑽石王牌是一部棒球漫畫作品， 作者寺嶋裕二刻畫了日本高校棒球（甲子園）的殘酷淘汰賽制、嚴格的學長學弟制，以及球員的心態轉折，故事除了描寫澤村榮純從「投球狂熱笨蛋」蛻變為王牌投手的過程，另一位天才投手降谷曉與他既是競爭對手也是互補的摯友，兩人良性競爭的故事線是本作一大看點 在第一部後半段（三年級學長隱退後），御幸一也接任青道高中棒球隊隊長。這個時期隊伍面臨青黃不接的陣痛期，而這四位同為三年級（新世代）的核心角色，各自在隊中扮演了支撐球隊的重要角色 御幸一也(みゆき かずや)（隊長 &#x2F; 主力捕手 &#x2F; 第四棒） 角色定位： 球隊的大腦 背景心境： 接任隊長後，他開始扛起凝聚球隊的重任。不僅要引導投手成長，還要在關鍵時刻用球棒帶領球隊得分。雖然背負著巨大的勝負壓力，但他以身作則的強大實力是全隊的精神支柱   倉持洋一(くらもち よういち)（副隊長 &#x2F; 遊擊手 &#x2F; 第一棒） 角色定位： 球隊的發動機 背景心境： 作為副隊長，他與御幸是同班同學，也是最懂御幸辛苦的人。在球場上，他用驚人的腳程和滴水不漏的守備帶動全隊氣勢；在休息室裡，他表面上雖然愛欺負學...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/journal/2026/04/29/%E4%BA%BA-NPC/" title="你有沒有想過 NPC 的感受"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/NPC/landing.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="你有沒有想過 NPC 的感受"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/04/29/%E4%BA%BA-NPC/" title="你有沒有想過 NPC 的感受">你有沒有想過 NPC 的感受</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-29T00:15:34.000Z" title="Created 2026-04-29 08:15:34">2026-04-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Character/">Character</a></span></div><div class="content">計程車司機我是一位計程車司機 每天的工作很單純，就是待在原地，等待被召喚 只要有冒險家按下「叫車」按鈕，我的存在就會被系統強制觸發，無論我原本在做什麼，我都要立刻上工 今天，又有一位冒險家呼叫我了，很好，任務出現了 我熟練地發動引擎，沿著系統規劃好的最短路徑前進，穿越那些永遠重複的街道與背景貼圖，準時抵達目的地 ………… （抵達）🚘 ………… 人呢？ 我打開小地圖確認，藍點還在，位置也沒錯 那個閃爍的玩家圖示，就在我旁邊的建築物裡 我走近一點，再確認一次 ……………… 操。 他在睡覺。 我就這樣一直站在門口，車子還在怠速，引擎聲規律地重複播放同一段音效。 我不能取消任務。我不能開走。因為我他媽的是一個系統 NPC，我被鎖死在「等待乘客上車」狀態。 時間不停流轉 白天 → 黃昏 → 夜晚 → 清晨 我依然在這裡。 街上的 NPC 開始輪班，有些人已經講完第三輪一模一樣的對話了 「今天的天氣真不錯啊。」「今天的天氣真不錯啊。」「今天的天氣真不錯啊。」 畢竟超出設定範圍的問題與內容他也講不出來，而我我連台詞都沒有 我只是一個等待觸發的功能 8 小時後，門終於打開了，那個冒險家伸了個懶...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/journal/2026/04/14/%E7%AB%A5%E5%B9%B4%E8%88%87%E7%B6%B2%E8%B7%AF/" title="童年與網路"><img class="post-bg" src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/memory/childhood-internet/yahoo-homepage.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="童年與網路"></a></div><div class="recent-post-info"><a class="article-title" href="/journal/2026/04/14/%E7%AB%A5%E5%B9%B4%E8%88%87%E7%B6%B2%E8%B7%AF/" title="童年與網路">童年與網路</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-04-14T01:02:34.000Z" title="Created 2026-04-14 09:02:34">2026-04-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/journal/categories/Life/">Life</a></span></div><div class="content">Windows XP 小時候玩電腦在的這個開機度條，等待過程不免讓人緊張不已，每每考驗的都是心理素質，雖然跑不完時還是只能崩潰 而聽到 XP 的開機音效時，搭配那藍天綠地的桌面，知道一切都有希望了! 開機音效一響，也就象徵著冒險的開始 作業系統 Windows XP 2001 年推出，微軟 2014 年宣布全面終止對 Windows XP 系統全部版本的技術支援服務，象徵經典的 XP 時代結束，至今也已有長達 25 年，現在回想起來，我爸媽作為自己不太使用電腦的人來說，竟然可以讓家裡擁有當代的作業系統，突然覺得一切都很神奇  還有這個 windows error remix 也很經典 Hinet 小時候就算冒著被臭罵的風險，也會偷偷趁大人不在的時候打開電腦，連上網路的瞬間就像擁有了全世界，短暫脫離了早起上下學的無聊日常 yahoo 奇摩首頁 小時候用電腦的第一站一定會來到這裡，他是那麼年代台灣人搜尋引擎代表，首頁不定時會出現一些奇怪的廣告動畫(汽車,用品…)，熱門搜尋也一定會有美女或緋聞相關的關鍵字 Foxy Foxy 就是 P2P（peer-to-peer，點對點）檔案分享。它...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/journal/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/journal/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/journal/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/journal/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Yo-Lin</div><div class="author-info-description"></div><div class="site-data"><a href="/journal/archives/"><div class="headline">Articles</div><div class="length-num">17</div></a><a href="/journal/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a><a href="/journal/categories/"><div class="headline">Categories</div><div class="length-num">7</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/journal/2026/09/05/ohyani/" title="Untitled">Untitled</a><time datetime="2026-09-05T07:05:10.683Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/journal/2026/09/05/Haikyu-%E4%B8%8D%E9%81%8E%E6%98%AF%E7%A4%BE%E5%9C%98%E6%B4%BB%E5%8B%95/" title="Untitled">Untitled</a><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/journal/2026/09/05/Haikyu-%E8%AA%8D%E6%B8%85%E8%87%AA%E5%B7%B1%EF%BC%8C%E6%89%BE%E5%B0%8B%E8%87%AA%E5%B7%B1%E8%83%BD%E5%81%9A%E7%9A%84%E4%BA%8B%E6%83%85-%E7%B7%A3%E4%B8%8B/" title="Untitled">Untitled</a><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/journal/2026/09/05/Haikyu-%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%9A%84%E7%B7%B4%E7%BF%92%E8%B3%BD-%E6%97%A5%E5%90%91/" title="Untitled">Untitled</a><time datetime="2026-09-05T07:05:10.680Z" title="Created 2026-09-05 15:05:10">2026-09-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/journal/2026/08/22/Titan-%E6%88%91%E5%80%91%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E4%B8%80%E7%9B%B4%E5%A4%B1%E6%95%97%E9%81%8E%E4%BE%86%E7%9A%84/" title="我們就是這樣一直失敗過來的 - S3E4"><img src="https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/Titan/titan-4-we-lose-alot.png" onerror="this.onerror=null;this.src='/journal/img/404.jpg'" alt="我們就是這樣一直失敗過來的 - S3E4"/></a><div class="content"><a class="title" href="/journal/2026/08/22/Titan-%E6%88%91%E5%80%91%E5%B0%B1%E6%98%AF%E9%80%99%E6%A8%A3%E4%B8%80%E7%9B%B4%E5%A4%B1%E6%95%97%E9%81%8E%E4%BE%86%E7%9A%84/" title="我們就是這樣一直失敗過來的 - S3E4">我們就是這樣一直失敗過來的 - S3E4</a><time datetime="2026-08-22T03:49:34.000Z" title="Created 2026-08-22 11:49:34">2026-08-22</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline"><i class="fas fa-folder-open"></i><span>Categories</span></div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Ace-of-diamonds/"><span class="card-category-list-name">Ace-of-diamonds</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Character/"><span class="card-category-list-name">Character</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Haikyu/"><span class="card-category-list-name">Haikyu!!</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Hinamatsuri/"><span class="card-category-list-name">Hinamatsuri</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Life/"><span class="card-category-list-name">Life</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/Titan/"><span class="card-category-list-name">Titan</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/journal/categories/%E6%88%91%E5%88%B0%E5%BA%95%E7%9C%8B%E4%BA%86%E7%94%9A%E9%BA%BC/"><span class="card-category-list-name">我到底看了甚麼</span><span class="card-category-list-count">4</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/journal/tags/https-raw-githubusercontent-com-CHI-KEKE-pics-refs-heads-main-Journal-Hinamatsuri-1-landing-png/" style="font-size: 1.1em; color: #999">https://raw.githubusercontent.com/CHI-KEKE/pics/refs/heads/main/Journal/Hinamatsuri/1-landing.png -</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/09/">
+            <span class="card-archive-list-date">
+              September 2026
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/08/">
+            <span class="card-archive-list-date">
+              August 2026
+            </span>
+            <span class="card-archive-list-count">2</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/07/">
+            <span class="card-archive-list-date">
+              July 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/05/">
+            <span class="card-archive-list-date">
+              May 2026
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/04/">
+            <span class="card-archive-list-date">
+              April 2026
+            </span>
+            <span class="card-archive-list-count">6</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/journal/archives/2026/02/">
+            <span class="card-archive-list-date">
+              February 2026
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-09-05T08:02:47.374Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Yo-Lin</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.1.260810</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/journal/js/utils.js?v=5.7.1.260810"></script><script src="/journal/js/main.js?v=5.7.1.260810"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
